@@ -29,6 +29,8 @@ class OpenWeatherMapServiceTest {
         final OpenWeatherMap weatherForRzeszow = service.getWeather("Rzeszów");
 
         Assertions.assertEquals(weatherForRzeszow.getName(),"Rzeszów");
+        Assertions.assertNotNull(weatherForRzeszow.getCoord());
+        Assertions.assertEquals(weatherForRzeszow.getSys().getCountry(),"PL");
         Assertions.assertTrue(weatherForRzeszow.getMain().getTemp() > 0.0);
     }
 }

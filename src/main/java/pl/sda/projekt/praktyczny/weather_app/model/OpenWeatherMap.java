@@ -6,4 +6,6 @@ import lombok.Data;
 public class OpenWeatherMap {
     private String name;
     private OpenWeatherMapMain main;
+    private OpenWeatherMapCoord coord;
+    private OpenWeatherMapSys sys;
 }
